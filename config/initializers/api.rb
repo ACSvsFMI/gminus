@@ -1,1 +1,1 @@
-GooglePlus.api_key = 'AIzaSyBa5wk7hTqO7yoswVwGaS0dDmPMCvU3EYs'
+API_KEY = 'AIzaSyBa5wk7hTqO7yoswVwGaS0dDmPMCvU3EYs'

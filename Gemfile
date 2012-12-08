@@ -24,8 +24,6 @@ gem 'jquery-rails'
 
 gem 'devise'
 
-gem "google_plus", "~> 0.2.2"
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

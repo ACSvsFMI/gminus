@@ -1,4 +1,8 @@
 Gminus::Application.routes.draw do
+  get "search/new"
+
+  get "search/show"
+
   resources :people
 
   devise_for :users

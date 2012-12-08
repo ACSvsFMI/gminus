@@ -3,6 +3,6 @@ class SearchController < ApplicationController
   end
 
   def show
-    @result = GooglePlus::Person.search(params[:search], max_results: 1)
+    @result = params[:search]
   end
 end

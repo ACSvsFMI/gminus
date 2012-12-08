@@ -10,5 +10,13 @@
   <%= @person.display_name %>
 </p>
 
+<p>
+	<ul>
+		<% @activities['items'].each do |a| %>
+		<li><%= a['object']['content'].html_safe %></li>
+		<% end %>
+	</ul>
+</p>
+
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

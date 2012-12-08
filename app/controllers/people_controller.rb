@@ -16,6 +16,8 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
+    activities = RestClient.get "https://www.googleapis.com/plus/v1/activities?query=#{@person.gplus_id}&key=#{ API_KEY }"
+    @activities = ActiveSupport::JSON.decode(activities)
 
     respond_to do |format|
       format.html # show.html.erb

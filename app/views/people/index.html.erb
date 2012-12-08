@@ -1,0 +1,27 @@
+<h1>Listing people</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Gplus</th>
+    <th>Display name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @people.each do |person| %>
+  <tr>
+    <td><%= person.user_id %></td>
+    <td><%= person.gplus_id %></td>
+    <td><%= person.display_name %></td>
+    <td><%= link_to 'Show', person %></td>
+    <td><%= link_to 'Edit', edit_person_path(person) %></td>
+    <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Person', new_person_path %>

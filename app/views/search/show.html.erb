@@ -1,6 +1,5 @@
 <ul>
 	<% @result["items"].each do |p| %>
-	<li><%= link_to p["displayName"], people_create_from_search_path, data: { name: "#{p['displayName']}", confirm: "Adding #{p["displayName"]} to important users. Confirm?" } %></li>
-	<li><a href="/search/show">adsads </a></li>
+	<li><%= link_to p["displayName"], people_create_from_search_path(p), data: { confirm: "Adding #{p['displayName']} to important people. Confirm?" } %></li>
 	<% end %>
 </ul>

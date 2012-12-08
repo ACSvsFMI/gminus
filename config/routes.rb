@@ -2,10 +2,10 @@ Gminus::Application.routes.draw do
   get "search/new"
 
   get "search/show"
+  
+  match "people/create_from_search", to: "people#create_from_search", via: :get, method: "create_from_search"
 
   resources :people
-  
-  match "people/create_from_search", to: "people#create_from_search"
 
   devise_for :users
 

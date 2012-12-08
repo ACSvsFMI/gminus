@@ -57,7 +57,18 @@ class PeopleController < ApplicationController
   end
   
   def create_from_search
-    render "hi"
+    @person = Person.new(gplus_id: params[:id], display_name: params[:displayName])
+    @person.user_id = current_user.id
+
+    respond_to do |format|
+      if @person.save
+        format.html { redirect_to @person, notice: 'Person was successfully created.' }
+        format.json { render json: @person, status: :created, location: @person }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @person.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PUT /people/1

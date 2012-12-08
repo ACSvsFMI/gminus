@@ -5,24 +5,55 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	
-	<div class="container">
-		<div class="navbar">
-			<% if user_signed_in? %>
-				Logged in as <strong><%= current_user.email %></strong>.
-				<%= link_to 'Edit profile', edit_user_registration_path %> |
-				<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-			<% else %>
-				<%= link_to "Sign up", new_user_registration_path %> |
-				<%= link_to "Login", new_user_session_path %>
-			<% end %>
+	<div class="page">
+		<div class="sidebar">
+			<a class="logo" href="javascript;"></a>
+			<ul class="menu">
+				<li class="active"><a href="javascript;">Dashboard</a></li>
+				<li><a href="javascript;">Users</a></li>
+				<li><a href="javascript;">Activity</a></li>
+				<li><a href="javascript;">Settings</a></li>
+				<li><a href="javascript;">Logout</a></li>
+			</ul>
 		</div>
 
-		<%= yield %>
+		<div class="center">
+			<div class="header">
 
+
+  			<h1>Dashboard</h1>
+
+  			<div class="user-data">
+  				<span class="user-data-email">example@web.com</span>
+
+  				<ul class="user-data-hidden">
+  					<li><a href="javascript;">Settings</a></li>
+  					<li><a href="javascript;">Logout</a></li>
+  				</ul>
+
+  			</div>
+  			<div class="clear"></div>
+  			<hr>
+
+  		</div>
+  		<!-- end of header -->
+
+  		<div class="pag">
+
+  			<%= yield %>
+
+  		</div>
+  		<!-- end of page -->
+
+		</div>
+		<div class="clear"></div>
 	</div>
+
 
 </body>
 </html>

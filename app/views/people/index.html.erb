@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Gplus</th>
     <th>Display name</th>
     <th></th>
@@ -12,7 +11,6 @@
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.user_id %></td>
     <td><%= person.gplus_id %></td>
     <td><%= person.display_name %></td>
     <td><%= link_to 'Show', person %></td>

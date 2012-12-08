@@ -1,6 +1,7 @@
+<% provide(:title, "Search on G+") %>
 <%= form_tag search_show_path, :method => 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], id: "searchbar" %>
     <%= submit_tag "Search", :name => nil, class: "btn btn-danger" %>
   </p>
 <% end %>

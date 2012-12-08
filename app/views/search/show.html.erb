@@ -1,5 +1,6 @@
+<% provide(:title, "Search results") %>
 <ul id="search_results">
 	<% @result["items"].each do |p| %>
-	<li><img src="<%= p['image']['url'] %>" /><%= link_to p["displayName"], people_create_from_search_path(p), data: { confirm: "Adding #{p['displayName']} to important people. Confirm?" } %></li>
+	<li><img src="<%= p['image']['url'] %>" /> <%= link_to p["displayName"], people_create_from_search_path(p), data: { confirm: "Adding #{p['displayName']} to important people. Confirm?" } %></li>
 	<% end %>
 </ul>

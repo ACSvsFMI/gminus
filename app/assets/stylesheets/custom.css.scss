@@ -1,1 +1,9 @@
 @import "bootstrap";
+@import "font-awesome";
+
+.pretty_login {
+	@extend .span6;
+	@extend .offset3;
+	
+	
+}

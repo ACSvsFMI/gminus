@@ -1,4 +1,7 @@
 Gminus::Application.routes.draw do
+  resources :activities
+
+
   get "search/new"
 
   get "search/show"

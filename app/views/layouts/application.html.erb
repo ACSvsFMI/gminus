@@ -17,8 +17,8 @@
 				<li class="active"><a href="javascript;">Dashboard</a></li>
 				<li><a href="javascript;">Users</a></li>
 				<li><a href="javascript;">Activity</a></li>
-				<li><a href="javascript;">Settings</a></li>
-				<li><a href="javascript;">Logout</a></li>
+				<li><%= link_to 'Settings', edit_user_registration_path %> |</li>
+				<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 			</ul>
 		</div>
 

@@ -1,17 +1,57 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Display name:</b>
+  <b>Name:</b>
   <%= @person.display_name %>
 </p>
 
-<p>
-	<ul>
+
+	<div class="activity">
+		<div class="activity-block">
+			<span class="calendar-icon activity-icon"></span>
+			<span class="activity-first-row"><%= Time.now.strftime("%d.%m.%y") %>  </span>
+			<span class="activity-second-row"><%= 10.minutes.ago.strftime("%R") %> <%= time_ago_in_words(10.minutes.ago) %>  </span>
+		</div>
+
+
+		<div class="activity-block">
+			<span class="users-icon activity-icon"></span>
+			<span class="activity-first-row">247  </span>
+			<span class="activity-second-row"><%= 5.minutes.ago.strftime("%R") %> <%= time_ago_in_words(5.minutes.ago) %>   </span>
+		</div>
+
+
+		<div class="activity-block">
+			<span class="news-icon activity-icon"></span>
+			<span class="activity-first-row">25341  </span>
+			<span class="activity-second-row"><%= 7.minutes.ago.strftime("%R") %> <%= time_ago_in_words(7.minutes.ago) %>   </span>
+		</div>
+
+	</div>
+
+	<div class="activity-btn">
+			<a class="activity-btn-grab" href="#">CRAWL</a>
+			<a class="activity-btn-advanced-grab" href="#">Advanced crawl</a>
+	</div>
+
+	<div class="clear"></div>
+
+
+	<div class="timeline">
+
 		<% @activities['items'].each do |a| %>
-		<li><%= a['object']['content'].html_safe %></li>
+		<div class="event">
+			<span class="text">
+			<%= a['object']['content'].html_safe %>
+			</span>
+		</div>
 		<% end %>
-	</ul>
-</p>
+	  				
+		<div class="clear"></div>
+	</div>
+
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

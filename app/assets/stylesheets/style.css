@@ -269,6 +269,7 @@ h1
 	background: #f3f3f3;
 	padding:10px;
 	display: block;
+	word-wrap: break-word;
 }
 
 .event:nth-child(2n)

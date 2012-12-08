@@ -55,6 +55,10 @@ class PeopleController < ApplicationController
       end
     end
   end
+  
+  def create_from_search
+    render "hi"
+  end
 
   # PUT /people/1
   # PUT /people/1.json

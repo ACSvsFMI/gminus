@@ -4,6 +4,8 @@ Gminus::Application.routes.draw do
   get "search/show"
 
   resources :people
+  
+  match "people/create_from_search", to: "people#create_from_search"
 
   devise_for :users
 

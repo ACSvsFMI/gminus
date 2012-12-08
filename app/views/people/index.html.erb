@@ -1,8 +1,5 @@
-<h1>Listing people</h1>
-
-<table>
+<table class="table table-striped table-bordered">
   <tr>
-    <th>Gplus</th>
     <th>Display name</th>
     <th></th>
     <th></th>
@@ -11,7 +8,6 @@
 
 <% @people.each do |person| %>
   <tr>
-    <td><%= person.gplus_id %></td>
     <td><%= person.display_name %></td>
     <td><%= link_to 'Show', person %></td>
     <td><%= link_to 'Edit', edit_person_path(person) %></td>
@@ -22,5 +18,5 @@
 
 <br />
 
-<%= link_to 'New Person', new_person_path %> |
-<%= link_to "Search on G+", search_new_path %>
+<%= link_to 'New Person', new_person_path, class: "btn btn-danger" %>
+<%= link_to "Search on G+", search_new_path, class: "btn btn-danger" %>

@@ -14,10 +14,10 @@
 		<div class="sidebar">
 			<a class="logo" href="javascript;"></a>
 			<ul class="menu">
-				<li class="active"><a href="javascript;">Dashboard</a></li>
-				<li><a href="javascript;">Users</a></li>
-				<li><a href="javascript;">Activity</a></li>
-				<li><%= link_to 'Settings', edit_user_registration_path %> |</li>
+				<li><a href="">Dashboard</a></li>
+				<li><%= link_to 'Users', people_path %></li>
+				<li><%= link_to 'Activity', activities_path %></li>
+				<li><%= link_to 'Settings', edit_user_registration_path %></li>
 				<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 			</ul>
 		</div>
@@ -29,11 +29,11 @@
   			<h1>Dashboard</h1>
 
   			<div class="user-data">
-  				<span class="user-data-email">example@web.com</span>
+  				<span class="user-data-email"><%= current_user.email %></span>
 
   				<ul class="user-data-hidden">
-  					<li><a href="javascript;">Settings</a></li>
-  					<li><a href="javascript;">Logout</a></li>
+  					<li><%= link_to 'Settings', edit_user_registration_path %></li>
+  					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
   				</ul>
 
   			</div>

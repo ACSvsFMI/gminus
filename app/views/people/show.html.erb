@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Gplus:</b>
-  <%= @person.gplus_id %>
-</p>
-
-<p>
   <b>Display name:</b>
   <%= @person.display_name %>
 </p>
@@ -19,5 +14,4 @@
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %> |
-<%= link_to 'Activities', activities_path %>
+<%= link_to 'Back', people_path %>

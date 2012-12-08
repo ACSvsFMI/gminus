@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  # another way
   layout :another_by_method
   private
   def another_by_method

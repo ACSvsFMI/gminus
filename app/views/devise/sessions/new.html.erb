@@ -1,23 +1,18 @@
-<div class="pretty_login">
-	<h2>Sign in</h2>
+<div class="login">
 
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-	  <div class="input-prepend">
-			<span class="add-on"><i class="icon-user"></i></span>
-			<%= f.email_field :email %>
-		</div>
+	<div class="image">
+		
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  <%= f.email_field :email, class: "email", placeholder: "example@mail.com" %>
 
-	  <div class="input-prepend">
-			<span class="add-on"><i class="icon-key"></i></span>
-			<%= f.password_field :password %>
-		</div>
+		  <%= f.password_field :password, class: "pass", placeholder: "password" %>
 
-	  <!-- <% if devise_mapping.rememberable? -%>
-	    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-	  <% end -%> -->
+		  <div><%= f.submit "" %></div>
+		<% end %>
 
-	  <div><%= f.submit "Sign in" %></div>
-	<% end %>
+	<div class="credits"></div>
 
-	<%= render "links" %>
+	</div>
+
+
 </div>

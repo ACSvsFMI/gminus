@@ -17,6 +17,10 @@ body
 	background: url(page-bg.png) repeat-x #424242;
 }
 
+.pag {
+	min-height: 1000px;
+}
+
 .sidebar
 {
 	width: 218px;
@@ -275,6 +279,88 @@ h1
 	width:318px;
 	float: left;
 }
+
+
+.login
+{
+	background-color: #f6f6f6;
+	margin: 0 auto;
+
+}
+
+.login .image
+{
+	background: url(login.png) no-repeat top center;
+	height: 635px;
+	width: 465px;
+	margin:0 auto;
+	margin-top:100px;
+	background-size: 70%;
+	position: relative;
+}
+
+
+.login form input
+{
+	background: none;
+	border: none;
+	border-color: #fbfbfb;
+	outline: none;
+	width:60px;
+	line-height: 40px;
+	height:30px;
+	position: absolute;
+}
+
+.login .email
+{
+	top:250px;
+	left:110px;
+	width:225px;
+
+}
+
+.login .pass
+{
+	top:293px;
+	left:110px;
+	width:225px;
+}
+
+
+.login input[type="submit"]
+{	
+	width:65px;
+	cursor: pointer;
+	height:30px;
+	position: absolute;
+	top:350px;
+	left:290px;
+}
+
+
+.credits
+{
+	width:429px;
+	height: 52px;
+	background: url(credits.png) no-repeat; 
+	background-size: 70%;
+	position: absolute;
+	top:460px;
+	left:80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

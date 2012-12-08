@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'devise'
 
 gem 'rest-client'
+
+gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
 # To use ActiveModel has_secure_password
